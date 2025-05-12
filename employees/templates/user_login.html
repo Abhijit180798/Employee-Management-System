@@ -1,0 +1,20 @@
+<!-- employees/templates/employees/user_login.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Login</title>
+</head>
+<body>
+  <h2>User Login</h2>
+  <form method="post">
+    {% csrf_token %}
+    <label>Username:</label><br>
+    <input type="text" name="username"><br><br>
+    <label>Password:</label><br>
+    <input type="password" name="password"><br><br>
+    <button type="submit">Login</button>
+  </form>
+  <br>
+  <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>

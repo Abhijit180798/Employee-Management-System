@@ -29,3 +29,11 @@ def delete_employee(request, emp_id):
     emp = get_object_or_404(Employee, id=emp_id)
     emp.delete()
     return redirect('index')
+def home(request):
+    return render(request, 'home.html')
+
+def admin_login(request):
+    return render(request, 'admin_login.html')
+
+def user_login(request):
+    return render(request, 'user_login.html')
